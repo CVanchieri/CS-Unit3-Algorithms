@@ -1,12 +1,21 @@
+
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
+### complete ### 
 def product_of_all_other_numbers(arr):
     # Your code here
+    products = [] # create a products list
+    for i in range(len(arr)): # for the value in the range of the length of the arr
+        product = 1 # set the product equal to 1
 
-    pass
+        for j in range(len(arr)): # for value in the rangle of the length of the arr
+            if j != i: # if the j value is not equal to i value
+                product *= arr[j] # multiple product by the j value in arr
+        products.append(product) # append the product value to the products list
 
+    return products # return the products list
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
